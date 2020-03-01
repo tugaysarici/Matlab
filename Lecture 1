@@ -21,7 +21,6 @@ Matlab responds to commands by printing text in the command window, or by openin
 
 % Dereceler modu yok, açılar radyan ile ölçülür. (There is no “degrees” mode. All angles are measured in radians.)
 
-
 >> log(256)       returns 5.5452, because this represents ln256 and the base is e.
 
 >> log10(256)     returns 2.4082 and 10 represents the logarithmic base.
@@ -43,5 +42,25 @@ Matlab responds to commands by printing text in the command window, or by openin
 >> z = log(y) + x^0.25
 z = 3.5341
 
+% Multiple statements can be made by ; and ,. Like:
 
+>> a = 5; b = sin(a), c = cosh(a)
+b = -0.9589
+c = 74.2099
 
+In Matlab, variable names:
+• Begin with one of a–z or A–Z
+• Have remaining characters chosen from a–z, A–Z, 0–9
+• Maximum 31 characters
+• Should not be the name of a built-in variable, built-in function, or user-defined function. 
+(built in: içinde var olan)
+
+% mySum and mysum are different variables. Matlab is case sensitive.
+
+% ans is used when that expression is not assigned to a variable.
+% eps is floating point precision (i dont understand).
+% realmax/realmin represents largest/smallest positive floating point number.
+% Inf represent infinitive
+% NaN represents 0/0.
+
+% √−1 is represented i or j in Matlab.
