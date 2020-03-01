@@ -64,3 +64,119 @@ In Matlab, variable names:
 % NaN represents 0/0.
 
 % √−1 is represented i or j in Matlab.
+
+% To create Matlab variable:
+>> x = expression
+
+>> A = [3 2; 3 1; 1 4]    in here, Columns of the matrix A are seperated with semicolons(;).
+A =
+     3     2
+     3     1
+     1     4
+     
+>> v = [9 -3 4 1]         the elements in rows are seperated with a space.
+v =
+     9    -3     4     1
+    
+>> w = v'                 ' represents the transpose.
+w =
+     9
+    -3
+     4
+     1
+
+Overwriting Variables: a variable can be reassigned. 
+(Overwriting: üstüne yazma)
+
+>> y = [1 2 3 4]
+y =
+     1     2     3     4
+>> y = y'
+y =
+     1
+     2
+     3
+     4
+     
+>> x = linspace(startValue,endValue)                x is a vector what consist of 1 row and 100 colons. Also first value is startValue,
+                                                    last value is endValue.
+>> x = linspace(startValue,endValue,nelements)      x is a vector what consists of 1 row and nelements colons. 
+
+>> x = linspace(0,2*pi,6)’;
+>> y = sin(x);
+>> z = cos(x);
+>> [x y z]
+ans =
+             0       0    1.0000
+        1.2566   0.9511   0.3090
+        2.5133   0.5878  -0.8090
+        3.7699  -0.5878  -0.8090
+        5.0265  -0.9511   0.3090
+        6.2832        0   1.0000
+        
+>> x = logspace(startValue,endValue,N)                   x is a vector what consists of N elements and between 
+                                                         startValue - 10^endvalue.
+>> x = logspace(X1,X2)                                   x is a vector what consists of 50 logarithmically
+                                                         equally spaced points between decades 10^X1 and 10^X2
+                                                         
+>> ones(N)                                               The NxN square matrix, each element is 1.
+>> ones(N,M)                                             The NxM matrix, each element is 1.
+>> ones(N,M,....)                                        This represents an multidimension array.
+>> ones(size(A))                                        If A is a matrix, that represents a matrix what have same size of A.
+
+% zeros(N), zeros(N,M), zeros(N,M,...) and zeros(size(A)) is used like ones().
+
+& eye(N), eye(N,M), eye(N,M,...) and eye(size(A)) is used like ones(). The diagonal elements are 1, all other elements are 0.
+________________________________________________________________________________________________________________________________________
+>> diag(v)                                        If v is a matrix what consists of one row or one colons, the diagonal elements
+                                                  are the elements of v. All other elements are zero.
+>> diag(v,N)                                      N kadar sağdan başlar ve altta N kadar fazlalık bulunur. Örneğin:
+
+>> v = [1 2 3 4]
+v =
+     1     2     3     4
+>> diag(v,2)
+ans =
+     0     0     1     0     0     0
+     0     0     0     2     0     0
+     0     0     0     0     3     0
+     0     0     0     0     0     4
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+________________________________________________________________________________________________________________________________________
+>> B = [1:4; 11:14; 21:24]
+B =
+     1     2     3     4
+    11    12    13    14
+    21    22    23    24
+>> w = diag(B)                    Eğer B diagonali bulunabilecek bir matris ise diag ifadesi bu elemanları sütun matrisi olarak alır.
+w =
+     1
+    12
+    23
+________________________________________________________________________________________________________________________________________
+>> A = [1 2 3; 4 5 6; 7 8 9];       
+>> b = A(3,2)                           A matrisinin bir elemanına erişmek için satır ve sütun değerleri girilir. 
+b =                                     A'nin bir elemanı kesirli bir ifadeye dönüşürse hepsi kesirli şekilde gösterilir.
+    8
+________________________________________________________________________________________________________________________________________
+>> A(1,1) = 1/8
+A =                                    A'nin bir elemanı kesirli bir ifadeye dönüşürse hepsi kesirli şekilde gösterilir.
+    0.1250    2.0000    3.0000
+    4.0000    5.0000    6.0000
+    7.0000    8.0000    9.0000
+________________________________________________________________________________________________________________________________________
+% Matrisin olmayan yerine erişilemez. Fakat olmayan yere atama yapılarak boyutu arttırılabilir.
+
+>> A(4,4)
+Index in position 1 exceeds array bounds (must not exceed 3).
+
+>> A(4,4) = 12
+A =
+    0.1250    2.0000    3.0000         0
+    4.0000    5.0000    6.0000         0
+    7.0000    8.0000    9.0000         0
+         0         0         0   12.0000
+________________________________________________________________________________________________________________________________________
+
+    
