@@ -1,0 +1,27 @@
+Introduce: Basic numerical methods and their applications in engineering.
+
+Learning outcomes: Solve nonlinear equations with a single unknown using numerical methods; systems of linear equations using numerical
+methods; Apply basic principles of optimization using numerical methods; ....
+
+Matlab'ı diğer dillerden ayıran en önemli özelliği "command windows". Diğer dillerde ve Matlab'da tüm kodu yazıp sonrasında derleyip ça-
+lıştırma mevcut. Fakat command windows ile yazarken derleyip çalıştırmaya izin veriliyor.
+
+Numerical methods are techniques by which mathematical problems are formulated so that they can be solved with arithmetic operations.
+
+Non-Computer Methods: Analytical (Exact) Methods, Graphical Solutions, Calculators.
+(tedious: bıktırıcı)
+
+Why study numerical methods?
+- Numerical methods are extremely powerful problem solving tools.
+- Numerical methods are an efficient vehicle for learning to program.
+- Numerical methods provide a vehicle to reinforce your understanding of mathematics by reducing higher mathematics to basic arithmetic equations.
+(reinforce: pekiştirmek, sağlamlaştırmak)
+
+Computers are great tools, however, without fundamental understanding of engineering problems, they will be useless.
+
+Benefits of Simulations
+- Cost savings by minimizing material usage.
+- Increased speed to market through reduced product development time.
+- Optimized structural performance with thorough analysis
+- Eliminate expensive trial-and-error.
+(thorough: derin | influence: etki, etkilemek)
