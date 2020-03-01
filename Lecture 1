@@ -2,3 +2,21 @@ INTRODUCTION TO MATLAB
 
 Matlab responds to commands by printing text in the command window, or by opening a figure window for graphical output.
 
+>>demo    opens the help window.
+
+% for single comment line
+%{ for multiple comment lines %}
+... special comment line ...
+
+>> 8/2            returns 4 and ans equals to 4.
+>> ans*5          returns 20 and ans equals to 20.
+
+>> a = 5          the 5 is assinged to a.
+>> b = 6          the 6 is assinged to a.
+>> c = b/a        the b/a is assinged to a.
+
+>> pi             ans equals to 3.1416.
+
+>> sin(ans/3)     returns 0.9954 and ans equals to 0.9954.
+
+>> 
