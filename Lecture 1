@@ -19,4 +19,29 @@ Matlab responds to commands by printing text in the command window, or by openin
 
 >> sin(ans/3)     returns 0.9954 and ans equals to 0.9954.
 
->> 
+% Dereceler modu yok, açılar radyan ile ölçülür. (There is no “degrees” mode. All angles are measured in radians.)
+
+
+>> log(256)       returns 5.5452, because this represents ln256 and the base is e.
+
+>> log10(256)     returns 2.4082 and 10 represents the logarithmic base.
+
+>> log2(256)      returns 8, the logarithmic base is 2.
+
+>> help sqrt      shows the usage of the sqrt function.
+
+>> doc plot       shows the documentation of the plot function.
+
+>> lookfor funtionName      searchs this function name. If you are not sure what function name is, you can use it.
+
+% When lookfor is used, >> is not appeared on the screen. You should press ctrl + c.
+
+% In the command windows if the semicolon (;) is not used, the operation that is made is not shown to user. Like:
+
+>> x = 5;
+>> y = sqrt(59);
+>> z = log(y) + x^0.25
+z = 3.5341
+
+
+
