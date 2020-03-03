@@ -1,0 +1,12 @@
+% Functions
+Bir script oluşturum fonksiyonu içine yazıyoruz ve kaydediyoruz.
+
+function [outArgs] = funName(inArgs)            Burada ouArgs ve inArgs virgüllerle ayrılabilir.
+
+Script içine:
+function [t] = twoSum (x,y)
+t = x + y;
+
+Command Windows'da çağırırken:
+T = twoSum(5,7);
+
