@@ -349,3 +349,87 @@ ans =
 % polyfit ile polinom eğrisi
 % roots ile kökler bulunur
 ____________________________________________________________________________________________________________________________________    
+% ARRAY OPERATORS
+
+.*        eleman eleman çarpım
+./        elemen elemen bölme(sağa)
+.\        eleman eleman bölme(sola)
+.^        eleman eleman üs alma
+
+>> u = [1 2 3];
+>> v = [7 8 9];
+>> u.*v
+ans =
+     7    16    27
+>> u.^2
+ans =
+     1     4     9
+____________________________________________________________________________________________________________________________________
+clear          değişkenleri workspace'den siler.
+who            workspace'deki değişkenleri listeler.
+whos           workspace'deki değişkenleri name, size, memory allocation, ve class özellikleriyle listeler.
+clc            command window'u temizler.
+
+Command window'da yapılanları kaydetme için save kullanılır. Fakat progamfiles'a kaydedilemiyor. Bu sebeple cd kullanarak konumu
+değiştirmeliyiz. Sonrasında:
+>> save test             ile kaydederiz.
+>> load test             ile yükleriz. Yüklemek istediğimiz değişkeni de belirtip sadece onun yüklenmesini de sağlayabiliriz.
+>> save test variable1
+>> load test variable1
+____________________________________________________________________________________________________________________________________
+>> plot(x, y)                       ile 2 boyutlu çizim yapılır.
+>> plot(xdata,ydata,symbol)
+>> plot(x1,y1,x2,y2,...)
+>> plot(x1,y1,symbol1,x2,y2,symbol2,...)
+
+Color           Symbols                                     Line
+y yellow        . point       ^ triangle (up)               - solid
+m magenta       o circle      < triangle (left)             : dotted
+c cyan          x x-mark      > triangle (right)            -. dashdot
+r red           + plus        p pentagram                   -- dashed
+g green         * star        h hexagram
+b blue          s square
+w white         d diamond
+k black         v triangle
+(down)
+
+>> plot(x,y,’r--’) gibi kullanılır
+____________________________________________________________________________________________________________________________________
+>> loglog                log10(y) versus log10(x)
+>> plot                  linear y versus x
+>> semilogx              linear y versus log10(x)
+>> semilogy              log10(y) versus linear x
+____________________________________________________________________________________________________________________________________
+Bir pencerede birden fazla grafik çizmek için subplot kullanılır.
+
+>> subplot(nRow, nCol, nLoc);          
+nRow x nCol kadar grafik çizilebilir. Bunun için her grafiğin başına bu eklenir ve nLoc değeri değştirilir. Örneğin 2x2yi ele alalım.
+1x1 için nLoc 1; 1x2 için nLoc 2 alınır. 2x1 için nLoc 3; 2x2 için nLoc 4 alınır. Örnek kod:
+
+>> x = linspace(0,2*pi);
+>> subplot(2,2,1);
+>> plot(x,sin(x)); axis([0 2*pi -1.5 1.5]); title('sin(x)');
+>> subplot(2,2,2);
+>> plot(x,sin(2*x)); axis([0 2*pi -1.5 1.5]); title('sin(2x)');
+>> subplot(2,2,3);
+>> plot(x,sin(3*x)); axis([0 2*pi -1.5 1.5]); title('sin(3x)');
+>> subplot(2,2,4);
+>> plot(x,sin(4*x)); axis([0 2*pi -1.5 1.5]); title('sin(4x)');
+____________________________________________________________________________________________________________________________________
+>> plot(m,t(:,1),’ro’,m,T(:,2),’k+’,m,T(:,3),’b-’);
+>> xlabel(’Month’);
+>> ylabel(’Temperature ({}^\circ F)’);
+>> title(’Monthly average temperature at PDX’);
+>> axis([1 12 20 100]);
+>> legend(’High’,’Low’,’Average’,2);
+____________________________________________________________________________________________________________________________________
+Name                Operation(s) performed
+axis                Reset axis limits
+grid                Draw grid lines at the major ticks marks on the x and y axes
+gtext               Add text to a location determined by a mouse click
+legend              Create a legend to identify symbols and line types when multiple curves are drawn on the same plot
+text                Add text to a specified (x, y) location
+xlabel              Label the x-axis
+ylabel              Label the y-axis
+title               Add a title above the plot
+____________________________________________________________________________________________________________________________________
