@@ -243,4 +243,109 @@ c =
     0.6324
     0.0975
 ________________________________________________________________________________________________________________________________________
-Sayfa 56'dan sonrası
+Complex Numbers
+
+>> sqrt(-4)
+ans =
+     0 + 2.0000i
+>> x = 1 + 2*i
+x =
+     1.0000 + 2.0000i
+>> i^2                             i yerine j de yazılsa aynı sonuç. 
+ans =
+     -1
+     
+% i ve j için default değerler -1^(1/2) dir. Eğer bunları döngülerde, erişimlerde falan kullanacaksan dikkat et.
+
+>> A = [1 2; 3 4];
+>> x = A(2,j)                      Hata almamak için öncesinde j'ye tam sayı ataması yapılmalı.                              
+??? Subscript indices must either be real positive integers or logicals.
+
+>> abs(3+2*i)                      Bir sayının büyüklüğünü hesaplar.
+ans =
+     7
+     
+>> angle(2+5i)*180/pi              Euler notation'daki açıyı gösterir.
+ans =
+   68.1986
+   
+>> exp(x)                          e^x ifadesini hesaplar. x yerine z olsa ve z complex olsaydı:
+                                   exp(z) = [e^Re(z)]*(cos(Im(z) + i sin(Im(z))
+                                   
+>> conj(2+5i)                      complex sayının eşleniğini bulur.
+ans =
+   2.0000 - 5.0000i
+
+>> imag(2+5i)                      sayının imaginar kısmı
+ans =
+     5
+     
+>> real(2+5i)                      sayının real kısmı
+ans =
+     2
+____________________________________________________________________________________________________________________________________     
+Strings in Matlab
+
+Karakter elemanlarıyla birlikte matrislerdir. Tek tırnak arasında ifadelendirilir.
+
+>> first = 'Tugay';
+>> last = 'SARICI';
+>> name = [first, ' ', last]
+name =
+    'Tugay SARICI'
+>> length(last)
+ans =
+     6
+>> name(7:12)
+ans =
+    'SARICI'
+ 
+% num2str; sayıyı stringe dönüştürür.
+>> msg1 = ['There are ',num2str(100/2.54), ' inches in a meter']           
+msg1 =
+    'There are 39.3701 inches in a meter'
+    
+% sprintf; C'deki printf gibi % ve & benzeri bir kullanım. Kullanılacak değer sonda belirtildi.
+>> msg2 = sprintf(’There are %5.2f cubic inches in a liter’,1000/2.54^3)
+msg2 =
+     There are 61.02 cubic inches in a liter
+     
+% char; tek başına ASCII sayılarını karşılığını gösterir. msg1 ve msg2'yi birleştirmek için de kullanılır.
+>> char(77)
+ans =
+    'M'
+>> char([77 65 84 76 65 66])
+ans =
+     MATLAB
+     
+>> both = char(msg1, msg2);
+>> both
+both =
+  2×35 char array
+    'There are 39.3701 inches in a meter'
+    ' World  
+
+>> strcmp(msg1, msg2)              iki stringi karşılaştırır, aynıysa 1 değilse 0.
+>> strncmp(msg1, msg2, N)          iki stringin ilk N karakterini karşılaştırır, aynıysa 1 değilse 0.
+
+>> findstr('in', msg1)             msg1 içerisinde in aranır ve indisi bastırılır. Birden fazla varsa birden fazla indis bastırılır.
+ans =
+    19    26
+    
+>> strmatch('Th', msg1)            msg1'in hangi satır/satırlarının Th ile başladığını gösterir.
+ans =
+     1
+____________________________________________________________________________________________________________________________________ 
+% Polinom hesaplama
+>> c = [2 -1 1 10];
+>> polyval(c, 2)                   x = 2, c ise katsayılar. Sağdan sola x^0, x^1, x^2, x^3.
+ans =
+    24
+    
+% conv ile 2 polinomun çarpılması
+% deconv ile 2 polinomun bölümü
+% poly ile belirlenen köklerde bir polinom yaratılır
+% polyder ile ikisi arasında ayrım yapılır.
+% polyfit ile polinom eğrisi
+% roots ile kökler bulunur
+____________________________________________________________________________________________________________________________________    
